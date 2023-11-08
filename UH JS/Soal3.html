@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Jenis Smartphone</title>
+    <link rel="stylesheet" type="text/css" href="Soal3.css">
+</head>
+<body>
+    <label for="inputText">Masukkan spesifikasi smartphone:</label>
+    <input type="text" id="inputText">
+    <button onclick="tampilkanJenis()">Tampilkan Jenis</button>
+    <p id="output"></p>
+
+    <script>
+        function tampilkanJenis() {
+            const inputText = document.getElementById("inputText").value;
+            const output = document.getElementById("output");
+
+            if (inputText === "10MP") {
+                output.textContent = "Jenis: Kamera";
+            } else if (inputText === "128GB") {
+                output.textContent = "Jenis: Memori";
+            } else {
+                output.textContent = "Spesifikasi tidak dikenali.";
+            }
+        }
+    </script>
+</body>
+</html>

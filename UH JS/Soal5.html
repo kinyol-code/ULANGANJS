@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Suara Hewan</title>
+    <link rel="stylesheet" type="text/css" href="Soal5.css">
+</head>
+<body>
+    <label for="hewan">Masukkan suara hewan (kucing/anjing):</label>
+    <input type="text" id="hewan">
+    <button onclick="tampilkanSuara()">Tampilkan Suara</button>
+    <p id="suara"></p>
+
+    <script>
+        function tampilkanSuara() {
+            const suarahewan = document.getElementById("hewan").value.toLowerCase();
+            const suaraOutput = document.getElementById("suara");
+
+            if (suarahewan === "meong") {
+                suaraOutput.textContent = "Suara kucing: Meong";
+            } else if (suarahewan === "guguk") {
+                suaraOutput.textContent = "Suara anjing: Guguk";
+            } else {
+                suaraOutput.textContent = "Hewan tidak dikenali.";
+            }
+        }
+    </script>
+</body>
+</html>

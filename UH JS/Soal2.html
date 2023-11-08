@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil</title>
+    <link rel="stylesheet" type="text/css" href="Soal2.css">
+</head>
+<body>
+    <label for="nilai">Masukkan nilai</label>
+    <input type="number" id="nilai">
+    <button onclick="tampilkanJenis()">Tampilkan hasilPesan</button>
+    <p id="hasil"></p>
+
+    <script>
+        function tampilkanJenis() {
+            const inputText = document.getElementById("nilai").value;
+            const output = document.getElementById("hasil");
+            const nilai = parseFloat(inputText); // Mengubah input menjadi angka
+
+            if (nilai > 80) {
+                output.textContent = "SANGAT MEMUASKAN";
+            } else if (nilai >= 60 && nilai <= 80) {
+                output.textContent = "MEMUASKAN";
+            } else {
+                output.textContent = "JANGAN MENYERAH, COBA LAGI !";
+            }
+        }
+    </script>
+</body>
+</html>

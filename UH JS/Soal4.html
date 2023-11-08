@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cek Tahun Bukan Kabisat</title>
+    <link rel="stylesheet" type="text/css" href="Soal4.css">
+</head>
+<body>
+    <label for="tahun">Masukkan tahun:</label>
+    <input type="number" id="tahun">
+    <button onclick="cekBukanKabisat()">Cek Tahun</button>
+    <p id="output"></p>
+
+    <script>
+        function cekBukanKabisat() {
+            const tahun = parseInt(document.getElementById("tahun").value);
+            const output = document.getElementById("output");
+
+            if (tahun === 1) {
+                output.textContent = tahun + " adalah bukan tahun kabisat.";
+            } else if (tahun % 4 !== 0) {
+                output.textContent = tahun + " adalah bukan tahun kabisat.";
+            } else {
+                output.textContent = tahun + " adalah tahun kabisat.";
+            }
+        }
+    </script>
+</body>
+</html>
